@@ -1,0 +1,157 @@
+:root {
+    --color-primary: #d10024;
+    --color-secondary: #15161d;
+    --color-white: white;
+    --transition: transform 0.3s ease;
+}
+
+body {
+    overflow-x: hidden;
+}
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.3em;
+}
+
+.bg-main {
+    background-color: var(--color-secondary);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+
+.main{
+    padding-top: 90px;
+}
+
+.btn-sidebar {
+    z-index: 1040; 
+}
+
+@media only screen and (max-width: 768px) {
+    .main{
+        padding-top: 200px;
+    }
+    #categories {
+        transition: var(--transition);
+        transform: translateX(-100%);
+        top: 0;
+        width: 75%;
+        z-index: 1050;
+    }
+    #categories.show{
+        transform: translateX(0);
+}
+    #cart{
+        width: 60%;
+        height: 50% !important;
+        overflow-y: scroll;
+    }
+    }
+    
+
+
+.btn-sidebar {
+    width: 30px;
+}
+
+.input {
+    padding: 5px 12px;
+    border: 2px solid rgb(192, 190, 190);
+    border-radius: 6px;
+}
+
+.logo {
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.logo a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+#cart {
+    transform: translateX(100%);
+    transition: var(--transition);
+    z-index: 1040;
+    overflow-y: scroll;
+    
+}
+
+#cart.show {
+    transform: translateX(0);
+}
+.cart-popup {
+    width: 30px;  
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 50%;
+    
+}
+
+
+
+.img-container {
+    position: relative;
+    width: 100%;
+    height: 200px; 
+    overflow: hidden; 
+}
+
+.img-container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit:contain; 
+}
+
+
+.card{
+    height: 100%;
+}
+.card-body{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+.card-text{
+    flex-grow: 1;
+}
+
+
+.categories-list{
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    transition: var(--transition);
+}
+.categories-list:hover{
+    transform: scale(1.1);
+    color: var(--color-secondary);
+}
